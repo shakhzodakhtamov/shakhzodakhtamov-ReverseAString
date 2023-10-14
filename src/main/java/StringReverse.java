@@ -1,4 +1,5 @@
 
+
 public class StringReverse {
     /**
      * Task: return the reverse of a string.
@@ -13,6 +14,13 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
-        return null;
+        int length = str.length();
+        char[] reversedChars = new char[length];
+        
+        for (int i = 0; i < length; i++) {
+            reversedChars[i] = str.charAt(length - 1 - i);
+        }
+        
+        return new String(reversedChars);
     }
 }
